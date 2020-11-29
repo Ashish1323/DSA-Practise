@@ -26,3 +26,14 @@ console.log(reverse([1,2,4,5,'a','b',10000000,11.5465,[1,4,6],6]))
 // output [ 6, [ 1, 4, 6 ], 11.5465, 10000000, 'b', 'a', 5, 4, 2, 1 ]
 console.log(reverse({0:1}))
 // Please Pass Correct Datatype!!
+
+
+const rev= str => str.split('').reverse().join('')
+const rev2= str => {
+    //console.log([...str])    
+    console.log(str.split())    
+    return [...str].reverse().join('')
+}
+
+console.log(rev("Bhen Ke Lode"))
+console.log(rev2("Bhen Ke Lode"))
