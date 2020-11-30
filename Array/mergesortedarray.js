@@ -8,7 +8,8 @@ const mergeSortedArrays =(array1, array2) =>{
    let i=0,j=0;
     while(i<length1 && j<length2){
         //checks the duplicates
-        if(array2[j]==array1[i]){
+        let equalArray=array2[j]==array1[i]
+        if(equalArray){
             mergedArray.push(array2[j])
             i++
             j++
@@ -38,4 +39,4 @@ const mergeSortedArrays =(array1, array2) =>{
 
 
 console.log(mergeSortedArrays([0,3,4,31], [3,4,6,30]))
-console.log(mergeSortedArrays([0,1,3,5], [3,4,6,30]))
+console.log(mergeSortedArrays([], [3,4,6,30]))
