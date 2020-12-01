@@ -1,9 +1,9 @@
 // mergeSortedArrays([0,3,4,31], [3,4,6,30]);
 
-const mergeSortedArrays =(array1, array2) =>{
+const mergeSortedArrays =(array1, m, array2, n) =>{
     //
-    length1 =array1.length
-    length2=array2.length
+    length1 =m
+    length2=n
     let mergedArray=[]
    let i=0,j=0;
     while(i<length1 && j<length2){
