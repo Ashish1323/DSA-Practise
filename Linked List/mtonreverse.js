@@ -5,7 +5,7 @@ class ListNode {
   }
 }
 // ---- Generate our linked list ----
-const linkedList = [5, 4, 3, 2, 1].reduce((acc, val) => new ListNode(val, acc), null);
+const linkedList = [1].reduce((acc, val) => new ListNode(val, acc), null);
 
 // ---- Generate our linked list ----
 
@@ -18,7 +18,6 @@ const printList = (head) => {
   printList(head.next);
 }
 var reverseBetween = function(head, m, n) {
-  let h=head;
   let position=1;
   let currentNode=head;            
   var startNode=currentNode
@@ -27,17 +26,17 @@ var reverseBetween = function(head, m, n) {
   var k=0
   while(position<=n){
       if(position==m-1){
-          var startNode=currentNode
+           startNode=currentNode
       }
       if(position==m){
-          var tailNode=currentNode
+           tailNode=currentNode
       }
       if(position>m-1 && position<n+1){
           var next=currentNode.next
           currentNode.next=prev
           var prev=currentNode
           currentNode=next
-          k++
+          k=1
       }
       position++
       if(k==0) currentNode=currentNode.next
@@ -52,6 +51,9 @@ var reverseBetween = function(head, m, n) {
   }
 };
 
+
+
 console.log(printList(linkedList))
 console.log('after reverse');
-console.log(printList(reverseBetween(linkedList, 2, 4)))
+//console.log(printList(reverseBetween(linkedList, 2, 4)))
+console.log(printList(reverseBetween(linkedList, 1, 1)))
