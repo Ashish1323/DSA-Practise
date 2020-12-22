@@ -160,12 +160,9 @@ var isValid2 =function(s) {
   for(let i=0;i<s.length;i++){
   if(open.get(s[i])){
     stack.push(s[i])
-    console.log(stack)
-    
   } else if(close.get(s[i])== stack[stack.length-1]){
-    console.log(close.get(s[i]))
+    console.log(close.values(s[i]),"jj")
     stack.pop()
-    console.log(stack)
   } 
   else{
       return false
